@@ -22,8 +22,8 @@ function Auth(){
     }
 
     return(
-        <div className='auth-container'>
-            <div className='auth-left'>
+        <div className="auth-container">
+            <div className="auth-left">
                 <div className="stickers-container">
                     <span className="sticker s1">💰</span>
                     <span className="sticker s2">💵</span>
@@ -39,7 +39,6 @@ function Auth(){
             <div className='auth-right'>
                 <div className='auth-card'>
                     <h2>{isLogin ? "Login" : "Register"}</h2>
-                    {error && <p className="error-text">{error}</p>}
                 
                     <form onSubmit={handleSubmit} className='auth-form'>
                         <div className='input-group'>
@@ -68,7 +67,7 @@ function Auth(){
                 </form>
 
                 <p className='switch-text'>
-                    {isLogin ? "Dont have an account?" : "Already have an account?"}
+                    {isLogin ? "Don't have an account?" : "Already have an account?"}
                     <span className='switch-link' onClick={handleToggle}>
                         {isLogin ? "Register" : "Login"}
                     </span>

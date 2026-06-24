@@ -1,5 +1,5 @@
-import React from "react";
 import React, {userState} from "react";
+import '../static/sidebar.css';
 
 function SideBar(){
 
@@ -65,3 +65,5 @@ const [activeItem,setActiveItem]=useState('dash');
         </div>
     );
 }
+
+export default SideBar;

@@ -1,0 +1,32 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  background:white; 
+  color: #1e293b;
+  overflow-x: hidden;  
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sidebar{
+   width:100%;
+   min-height: 100vh;  
+   display: flex;
+   background: white;
+}
+
+.logo-card{
+    width: 80px;
+    height: 30px;
+    margin: auto;
+    padding: 0%;
+    border: none;
+}
+

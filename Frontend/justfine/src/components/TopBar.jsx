@@ -18,9 +18,9 @@ const handleTrans=()=>{
             <h3>{headerLabel}</h3>
             <input className="search" type="text" placeholder="🔍 Search transactions..." value={search} onChange={(e)=> setSearch(e.target.value)}/>
             <div className="notification">
-                <button type="button" onClick={handleNotify}>
+                <buttclon type="button" onClick={handleNotify}>
                      <i className="ti ti-bell"></i>
-                </button>
+                </buttclon>
             </div>
             <div className="add-trans">
                 <button type="button" onClick={handleTrans}>+ Add Transaction</button>

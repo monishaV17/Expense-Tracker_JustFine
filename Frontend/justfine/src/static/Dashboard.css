@@ -1,0 +1,66 @@
+.dashboard-card{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 650px;
+}
+
+.dashboard-balance-card{
+    background: #2563eb;
+    border-radius: 14px;
+    padding: 24px;
+    color: #ffffff;
+}
+
+.dashboard-balance-label{
+    font-size: 11px;
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: block;
+}
+
+.dashboard-balance-amount{
+    font-size: 36px;
+    font-weight: 600;
+    margin: 6px 0 4px;
+}
+
+.dashboard-balance-available{
+    font-size: 12px;
+    background: rgba(255, 255, 255, 0.18);
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    opacity: 0.9;
+}
+
+.transaction-type{
+    gap: 12px;
+    display: flex;
+    margin-top: 20px;
+}
+
+.btn{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.btn i{
+    font-size: 18px;
+}

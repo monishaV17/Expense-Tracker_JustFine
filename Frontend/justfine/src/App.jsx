@@ -1,14 +1,17 @@
 import React from 'react';
 import {Routes, Route} from 'react-router-dom';
-import Auth from './components/Auth';
+import Auth from './pages/Auth';
 import SideBar from './components/SideBar';
 import Layout from './components/Layout';
+import Dashboard from './pages/Dashboard';
 
 function App(){
     return (
         <Routes>
             <Route path="/" element={<Auth />}/>
-            <Route path="/layout" element={<Layout />}/>
+            <Route element={<Layout />}>
+                <Route path="/dashboard" element={<Dashboard />}/>
+            </Route>
         </Routes>
     );
 }

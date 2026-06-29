@@ -1,3 +1,11 @@
+:root{
+--blue: #2563eb;
+}
+
+body.dark{
+    --blue: #3b82f6;
+}
+
 .dashboard-card{
     display: flex;
     flex-direction: column;
@@ -6,7 +14,7 @@
 }
 
 .dashboard-balance-card{
-    background: #2563eb;
+    background: var(--blue);
     border-radius: 14px;
     padding: 24px;
     color: #ffffff;

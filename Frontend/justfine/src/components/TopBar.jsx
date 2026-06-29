@@ -1,5 +1,6 @@
 import { useState } from "react";
 import '../static/TopBar.css';
+import ToggleTheme from "./ToggleTheme";
 
 function TopBar({headerLabel}) {
   const [search, setSearch]=useState('');
@@ -17,6 +18,7 @@ const handleTrans=()=>{
         <header className="top-bar">
             <h3>{headerLabel}</h3>
             <input className="search" type="text" placeholder="🔍 Search transactions..." value={search} onChange={(e)=> setSearch(e.target.value)}/>
+            <ToggleTheme /> 
             <div className="notification">
                 <buttclon type="button" onClick={handleNotify}>
                      <i className="ti ti-bell"></i>

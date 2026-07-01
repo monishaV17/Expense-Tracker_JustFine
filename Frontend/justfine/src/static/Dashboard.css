@@ -1,22 +1,48 @@
 :root{
 --blue: #2563eb;
+--surface: #ffffff;
+--text: #1e293b;
+--text-muted: #64748b;
+--bg: #f4f5f8;
+--border: rgba(29, 18, 18, 0.221);
 }
 
 body.dark{
     --blue: #3b82f6;
+    --text: #e2e8f0;
+    --text-muted: #94a3b8;
+    --bg: #0f172a;
+    --border: #e2e8f06a;
+    --surface: #1e293b;
 }
-
 .dashboard-card{
     display: flex;
     flex-direction: column;
     gap: 16px;
-    width: 650px;
+    width: 100%;
+    max-width: 1400px; 
+}
+
+.dashboard-top-row{
+    display: flex;
+    gap: 16px;
+    align-items: stretch;  
+}
+
+.dashboard-top-row .dashboard-balance-card{
+    flex: 1;
+}
+
+.dashboard-top-row .chart-box{
+    flex: 0 0 300px;
+    max-width: 300px;
 }
 
 .dashboard-balance-card{
     background: var(--blue);
     border-radius: 14px;
     padding: 24px;
+    padding-bottom: 60px;  
     color: #ffffff;
 }
 
@@ -71,4 +97,64 @@ body.dark{
 
 .btn i{
     font-size: 18px;
+}
+
+.dashboard-account{
+    display: flex;
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.account-card{
+    flex: 1;
+    background: var(--bg);
+    border-radius: 12px;
+    padding: 16px;
+    color: var(--text); 
+    text-align: start;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    border: 1px solid var(--border);
+}
+
+.account-card .name{
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--text);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    opacity: 0.8;
+}
+
+.account-card .balance{
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.account-card .type{
+    font-size: 10px;
+    opacity: 1;
+    color: var(--blue);
+}
+
+.chart-box{
+    background: var(--surface);
+    border-radius: 14px;
+    padding: 20px;
+    max-width: 350px;
+}
+
+.chart-title{
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 16px;
+}
+
+.chart-empty{
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.chart-box canvas{
+    max-height: 220px;
 }

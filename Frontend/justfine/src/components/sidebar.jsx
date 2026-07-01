@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import '../static/sidebar.css';
+import {Pie} from "react-chartjs-2";
 
 function SideBar(){
 

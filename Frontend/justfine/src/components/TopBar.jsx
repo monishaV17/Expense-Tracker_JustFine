@@ -20,9 +20,9 @@ const handleTrans=()=>{
             <input className="search" type="text" placeholder="🔍 Search transactions..." value={search} onChange={(e)=> setSearch(e.target.value)}/>
             <ToggleTheme /> 
             <div className="notification">
-                <buttclon type="button" onClick={handleNotify}>
-                     <i className="ti ti-bell"></i>
-                </buttclon>
+                <button type="button" onClick={handleNotify}>
+                     <i>🔔</i>
+                </button>
             </div>
             <div className="add-trans">
                 <button type="button" onClick={handleTrans}>+ Add Transaction</button>

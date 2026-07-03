@@ -5,6 +5,7 @@ import SideBar from './components/SideBar';
 import Layout from './components/Layout';
 import Dashboard from './pages/Dashboard';
 import ToggleTheme from './components/ToggleTheme';
+import Transaction from './pages/Transaction';
 
 function App(){
     return (
@@ -12,6 +13,7 @@ function App(){
                 <Route path="/" element={<Auth />}/>
                 <Route element={<Layout />}>
                     <Route path="/dashboard" element={<Dashboard />}/>
+                    <Route path="/transaction" element={<Transaction />}/>
                 </Route>
         </Routes>
     );

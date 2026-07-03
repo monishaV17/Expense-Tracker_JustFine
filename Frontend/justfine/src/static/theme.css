@@ -1,0 +1,17 @@
+:root{
+    --blue: #2563eb;
+    --surface: #ffffff;
+    --text: #1e293b;
+    --text-muted: #64748b;
+    --bg: #f4f5f8;
+    --border: rgba(29, 18, 18, 0.221);
+}
+
+body.dark{
+    --blue: #3b82f6;
+    --text: #e2e8f0;
+    --text-muted: #94a3b8;
+    --bg: #0f172a;
+    --border: #e2e8f06a;
+    --surface: #1e293b;
+}

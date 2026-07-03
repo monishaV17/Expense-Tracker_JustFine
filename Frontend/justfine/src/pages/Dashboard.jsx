@@ -2,6 +2,7 @@ import React, { useState, useEffect} from "react";
 import '../static/Dashboard.css';
 import {Pie} from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+import TransactionModal from "./TransactionModal";
 
 ChartJS.register(ArcElement, Tooltip, Legend)
 

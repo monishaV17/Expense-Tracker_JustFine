@@ -1,17 +1,15 @@
 import { useState } from "react";
 import '../static/TopBar.css';
 import ToggleTheme from "./ToggleTheme";
+import TransactionModal from "../pages/TransactionModal";
 
 function TopBar({headerLabel}) {
   const [search, setSearch]=useState('');
+  const [isModalOpen, setIsModalOpen]=useState(false);
 
 
 const handleNotify=()=>{
     alert("notification clicked");
-}
-
-const handleTrans=()=>{
-    alert("transaction clicked");
 }
 
     return (
@@ -25,8 +23,12 @@ const handleTrans=()=>{
                 </button>
             </div>
             <div className="add-trans">
-                <button type="button" onClick={handleTrans}>+ Add Transaction</button>
+                <button type="button" onClick={()=> setIsModalOpen(true)}>+ Add Transaction</button>
             </div>
+            <TransactionModal
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+                 onAdd={(tx) => console.log("new transaction:", tx)}/>
         </header>
     )
 }

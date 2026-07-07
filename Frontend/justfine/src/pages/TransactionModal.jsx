@@ -39,13 +39,13 @@ function TransactionModal({isOpen, onClose, onAdd}){
         date: ""
     });
 
-    const handleClose = (e) =>{
-        if (e) {
+    const handleClose=(e)=>{
+        if(e){
             e.preventDefault();
             e.stopPropagation();
         }
         setFormData({ amount:"", txn_type: "expense", category_id:"", source_id:"", description:"", date:"" });
-        if (typeof onClose === "function"){
+        if(typeof onClose === "function"){
             onClose();
         }
     };
@@ -56,7 +56,7 @@ function TransactionModal({isOpen, onClose, onAdd}){
 
     const handleSubmit=(e)=>{
         e.preventDefault();
-        onAdd({...formData, id: Date.now()});
+        onAdd({ ...formData, id: Date.now() });
         setFormData({amount: "",txn_type:"expense",category_id: "",source_id: "",description: "",date: ""});
         if(typeof onClose === "function"){
             onClose();
@@ -100,7 +100,7 @@ function TransactionModal({isOpen, onClose, onAdd}){
                     onChange={e=> setFormData({...formData,date: e.target.value})} required />
 
                     <input type="text" placeholder="Description" value={formData.description} 
-                    onChange={e=> setFormData({...formData,description: e.target.value})} required />
+                    onChange={e=> setFormData({...formData,description: e.target.value})} />
 
                     <button type="submit">Add Transaction</button>
                 </form>

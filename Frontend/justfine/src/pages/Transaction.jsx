@@ -11,15 +11,28 @@ function Transaction(){
     { id: 4, amount: 2200, txn_type: "expense", category_id: "Bills & Utilities", source_id: "SBI", description: "Electricity bill", date: "2026-06-28" },
     { id: 5, amount: 1200, txn_type: "expense", category_id: "Shopping", source_id: "SBI", description: "Groceries", date: "2026-06-25" }])
 
+    const [active,setActive]=useState("All");
+
+    const filters=["All", "Income", "Expense", "Transfer", "Debts"];
+
+    const filteredTransactions=active === "All" ? transactions : 
+                    transactions.filter((tx)=> tx.txn_type.toLowerCase() === active.toLowerCase());
+
     return (
         <div className="transaction-page">
             <h2>All Transactions</h2>
-
-                {transactions.length === 0 ? (
+            <div className="filter-row">
+                {filters.map((filter)=>(
+                <button key={filter} className={`filter-chip ${active === filter ? "active" : ""}`} 
+                onClick={()=> setActive(filter)}>{filter}</button>
+                ))
+                }
+            </div>
+                {filteredTransactions.length === 0 ? (
                     <p className="empty-state">No transactions yet</p>
                 ) : (
                     <ul>
-                        {transactions.map(tx => (
+                        {filteredTransactions.map(tx => (
                             <li key={tx.id} className={`txn-item ${tx.txn_type}`}>
                                 <span className="txn-date">{tx.date}</span>
                                 <span className="txn-desc">{tx.description}</span>

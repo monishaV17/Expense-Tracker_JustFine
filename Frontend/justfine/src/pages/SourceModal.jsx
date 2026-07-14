@@ -1,56 +1,48 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import '../static/ModalTransac.css';
 
-function SourceModal({isOpen,onClose,onAdd}){
+const INITIAL_FORM_STATE={ name: "", description: "", amount: "", is_savings: false };
 
-    const [formData,setFormData]=useState({
-        name:"", description:"", amount:"", is_savings:false
-    });
+function SourceModal({ isOpen, onClose, onAdd }){
+    const [formData, setFormData]=useState(INITIAL_FORM_STATE);
 
-    const handleClose=(e)=>{
-        if(e){
-            e.preventDefault();
-            e.stopPropagation();
-        }
-        setFormData({ name:"", description: "", amount:"", is_savings:false});
-        if(typeof onClose === "function"){
-            onClose();
-        }
+    if (!isOpen) return null;
+
+    const handleChange = (e) => {
+        const { name, value, type, checked }=e.target;
+        setFormData(prev => ({
+            ...prev,
+            [name]: type === 'checkbox' ? checked : value
+        }));
     };
 
-    if(!isOpen){
-        return null;
-    }
-
-    const handleSubmit=(e)=>{
+    const handleSubmit = (e) => {
         e.preventDefault();
-        onAdd({ ...formData});
-        setFormData({ name:"", description: "", amount:"", is_savings:false});
-        if(typeof onClose === "function"){
-            onClose();
-        }
-    }
+        onAdd(formData);
+        setFormData(INITIAL_FORM_STATE);
+        onClose();
+    };
 
     return (
-        
-            <div className="modal-overlay" onClick={handleClose}>
-                <div className="modal-content" onClick={(e)=> e.stopPropagation()}>
-                    <button type="button" className="close-btn" onClick={handleClose}>✕</button>
+        <div className="modal-overlay" onClick={onClose}>
+            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                <button type="button" className="close-btn" onClick={onClose}>✕</button>
+                
                 <form onSubmit={handleSubmit}>
-                    <input className="form-imput" name="name" placeholder="Source name" value={formData.name} 
-                    onChange={e=> setFormData({...formData,name: e.target.value})} required />
-
-                    <input className="form-input" type="text" placeholder="Description" value={formData.description} name="description"
-                    onChange={e=> setFormData({...formData,description: e.target.value})} required />
-
-                    <input className="form-input" type="number" placeholder="Amount (₹)" value={formData.amount} 
-                    onChange={e=> setFormData({...formData,amount: e.target.value})} />
+                    <input className="form-input" name="name" placeholder="Source name" value={formData.name} onChange={handleChange} required />
+                    <input className="form-input" name="description" type="text" placeholder="Description" value={formData.description} onChange={handleChange} required />
+                    <input className="form-input" name="amount" type="number" placeholder="Amount (₹)" value={formData.amount} onChange={handleChange} />
+                    
+                    <label className="checkbox-label">
+                        <input name="is_savings" type="checkbox" checked={formData.is_savings} onChange={handleChange} />
+                        <span className="savings-acc">Savings Account</span>
+                    </label>
 
                     <button type="submit">Add Source</button>
                 </form>
-                </div>
             </div>
-    )
+        </div>
+    );
 }
 
 export default SourceModal;

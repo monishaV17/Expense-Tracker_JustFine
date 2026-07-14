@@ -75,10 +75,16 @@ function Sources() {
             ) : (
                 filteredSources.map(s => (
                     <div key={s.id} className="src-card">
-                        <div className="src-name">{s.name}</div>
-                        <div className="src-desc">{s.description}</div>
-                        <div className="src-amt">₹{s.amount / 100}</div>
-                        <div className="src-txn">{s.transaction_count} transactions</div>
+                        <div className="src-top">
+                        <div className="src-left">
+                        <span className="src-name">{s.name}</span>
+                        <span className="src-des">{s.description}</span>
+                        </div>
+                        <div className="src-right">
+                         <span className="src-amt">₹{s.amount / 100}</span>
+                        <span className="src-txn">{s.transaction_count} transactions</span>
+                        </div>
+                        </div>
 
                         <div className="src-badges">
                             {s.is_savings && <span className="badge badge-savings">Savings</span>}

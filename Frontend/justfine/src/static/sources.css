@@ -37,25 +37,47 @@
     padding: 16px;
 }
 
-.src-name{ 
-    font-size: 15px; 
-    font-weight: 600; 
-    color: var(--blue);
+.src-top {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;        
+    width: 100%;
 }
 
-.src-desc{ 
-    font-size: 12px; 
-    color: var(--text-muted);}
+.src-left {
+    display: flex;
+    flex-direction: column;
+}
 
-.src-amt{ 
+.src-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text);
+}
+
+.src-des {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+.src-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;         
+    text-align: right;
+}
+
+.src-amt { 
     font-size: 18px; 
     font-weight: 600; 
-    color: var(--text); 
-    margin-top: 8px;
+    color: var(--blue); 
 }
 
-.src-txn{ font-size: 11px; 
+.src-txn { 
+    font-size: 11px; 
     color: var(--text-muted);
+    margin-top: 2px;
 }
 
 .src-badges{ 

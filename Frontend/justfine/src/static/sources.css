@@ -27,6 +27,9 @@
     cursor: pointer;
 }
 
+.sources-add-btn :hover{
+    background: #608be7;
+}
 .src-card{
     background: var(--surface);
     border: 1px solid var(--border);
@@ -34,14 +37,103 @@
     padding: 16px;
 }
 
-.src-name{ font-size: 15px; font-weight: 600; color: var(--blue);}
-.src-desc{ font-size: 12px; color: var(--text-muted);}
-.src-amt{ font-size: 18px; font-weight: 600; color: var(--text); margin-top: 8px;}
-.src-txn{ font-size: 11px; color: var(--text-muted);}
+.src-name{ 
+    font-size: 15px; 
+    font-weight: 600; 
+    color: var(--blue);
+}
 
-.src-badges{ display: flex; flex: 6px; margin-top: 8px;}
-.badge{ font-size: 11px; padding: 2px 8px; border-radius: 20px; font-weight: 500;}
-.badge-savings{ background: #dcfce7; color: #15803d;}
-.badge-active{ background: #eff6ff; color: #2563eb;}
-.badge-inactive{ background: #fef3c7; color: #92400e;}
+.src-desc{ 
+    font-size: 12px; 
+    color: var(--text-muted);}
+
+.src-amt{ 
+    font-size: 18px; 
+    font-weight: 600; 
+    color: var(--text); 
+    margin-top: 8px;
+}
+
+.src-txn{ font-size: 11px; 
+    color: var(--text-muted);
+}
+
+.src-badges{ 
+    display: flex; 
+    flex: 6px; 
+    margin-top: 8px;
+}
+
+.badge{ 
+    font-size: 11px; 
+    padding: 2px 8px; 
+    border-radius: 20px; 
+    font-weight: 500;
+}
+
+.badge-savings{ 
+    background: #dcfce7; 
+    color: #15803d;
+}
+
+.badge-active{ 
+    background: #eff6ff; 
+    color: #2563eb;
+}
+
+.badge-inactive{ 
+    background: #fef3c7; 
+    color: #92400e;
+}
+
+.parts{ 
+    border-top: 1px solid var(--border); 
+    padding-top: 10px; 
+    margin-top: 10px;
+}
+
+.parts-title{ 
+    font-size: 10px; 
+    font-weight: 600; 
+    color: var(--text-muted); 
+    text-transform: uppercase; 
+    margin-bottom: 6px;
+}
+
+.part-row{ 
+    display: flex; 
+    justify-content: space-between; 
+    padding: 5px 0; 
+    font-size: 12px; 
+    border-bottom: 1px dashed var(--border);
+    color: var(--text);
+}
+
+.part-row:last-child{ 
+    border-bottom: none;
+}
+
+.src-actions{
+    display: flex;
+    gap: 6px;
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid var(--border);
+}
+
+.action-btn{
+    padding: 5px 10px; 
+    border-radius: 6px; 
+    border: 1px solid var(--border); 
+    background: var(--surface); 
+    color: var(--text-muted); 
+    font-size: 12px; 
+    cursor: pointer;
+}
+
+.action-btn.delete{ 
+    color: #dc2626; 
+    border-color: #fecaca; 
+    margin-left: auto; 
+}
 

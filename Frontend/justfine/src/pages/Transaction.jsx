@@ -1,6 +1,6 @@
-import React, {useState} from "react";
-import TransactionModal from "./TransactionModal";
+import {useState} from "react";
 import '../static/Transaction.css';
+import FilterBox from '../components/FilterBox';
 
 function Transaction(){
 
@@ -21,13 +21,8 @@ function Transaction(){
     return (
         <div className="transaction-page">
             <h2>All Transactions</h2>
-            <div className="filter-row">
-                {filters.map((filter)=>(
-                <button key={filter} className={`filter-chip ${active === filter ? "active" : ""}`} 
-                onClick={()=> setActive(filter)}>{filter}</button>
-                ))
-                }
-            </div>
+                <FilterBox filters={["All","Income","Expense","Transfer","Debts"]}
+                            active={active} onChange={setActive}/>
                 {filteredTransactions.length === 0 ? (
                     <p className="empty-state">No transactions yet</p>
                 ) : (

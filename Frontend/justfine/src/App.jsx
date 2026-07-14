@@ -6,6 +6,7 @@ import Layout from './components/Layout';
 import Dashboard from './pages/Dashboard';
 import ToggleTheme from './components/ToggleTheme';
 import Transaction from './pages/Transaction';
+import Sources from './pages/sources';
 
 function App(){
     return (
@@ -14,6 +15,7 @@ function App(){
                 <Route element={<Layout />}>
                     <Route path="/dashboard" element={<Dashboard />}/>
                     <Route path="/transaction" element={<Transaction />}/>
+                    <Route path="/sources" element={<Sources />} /> 
                 </Route>
         </Routes>
     );

@@ -7,6 +7,7 @@ import Dashboard from './pages/Dashboard';
 import ToggleTheme from './components/ToggleTheme';
 import Transaction from './pages/Transaction';
 import Sources from './pages/sources';
+import DebtsLoan from './pages/DebtsLoan';
 
 function App(){
     return (
@@ -16,6 +17,7 @@ function App(){
                     <Route path="/dashboard" element={<Dashboard />}/>
                     <Route path="/transaction" element={<Transaction />}/>
                     <Route path="/sources" element={<Sources />} /> 
+                    <Route path="/debts" element={<DebtsLoan />} />
                 </Route>
         </Routes>
     );

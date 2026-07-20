@@ -8,6 +8,7 @@ import ToggleTheme from './components/ToggleTheme';
 import Transaction from './pages/Transaction';
 import Sources from './pages/sources';
 import DebtsLoan from './pages/DebtsLoan';
+import Coupons from './pages/Coupons';
 
 function App(){
     return (
@@ -18,6 +19,7 @@ function App(){
                     <Route path="/transaction" element={<Transaction />}/>
                     <Route path="/sources" element={<Sources />} /> 
                     <Route path="/debts" element={<DebtsLoan />} />
+                    <Route path="/coupons" element={<Coupons />} />
                 </Route>
         </Routes>
     );

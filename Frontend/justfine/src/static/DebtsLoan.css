@@ -1,5 +1,7 @@
 .debts-page{
     padding: 20px;
+    width: 1250px;
+    height: 30px;
 }
 
 .debts-top{
@@ -10,8 +12,7 @@
 }
 
 .debts-subtitle{
-    font-size: 13px;
-    color: var(--text-muted);
+    color: var(--text);
 }
 
 .debts-list{
@@ -66,7 +67,7 @@
 
 .badge-lent{ 
     background: #e6f9ed; 
-    color: #10b981; 
+    color: #07563c; 
 }
 
 .debt-metrics-grid{
@@ -116,23 +117,54 @@
 
 .debt-progress-bar-container{
     width: 100%;
-    height: 3px;
-    background: #e6ebf1;
-    border-radius: 2px;
-    margin-top: 8px;
+    height: 6px;
+    background: #e5e7eb;
+    border-radius: 999px;
+    overflow: hidden;
 }
 
 .debt-progress-fill{
     height: 100%;
-    background: #10b981;
+    background: #16a34a;
+    border-radius: inherit;
+    transition: width 0.2s ease;
 }
 
 .debt-actions{
-    position: absolute;
-    top: 20px;
-    right: 20px;
     display: flex;
     gap: 6px;
+}
+
+.debt-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+    gap: 12px;
+}
+
+.debt-footer-left{
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.debt-actions-group{
+    display: flex;
+    gap: 10px;
+}
+
+.action-btn{
+    border: none;
+    background: transparent;
+    color: var(--blue);
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+.action-btn.delete{
+    color: #ef4444;
 }
 
 .debts-add-btn{

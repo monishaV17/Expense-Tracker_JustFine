@@ -42,7 +42,7 @@ function DebtsLoan({ debts = [], onAdd = () => {}, onEdit = () => {}, onDelete =
         <div className="debts-page">
             <div className="debts-top">
                 <div>
-                    <p className="debts-subtitle">Track who owes what</p>
+                    <h2 className="debts-subtitle">Track who owes what</h2>
                 </div>
                 <button className="debts-add-btn" onClick={() => setIsModalOpen(true)}>
                     + Add Record
@@ -60,11 +60,6 @@ function DebtsLoan({ debts = [], onAdd = () => {}, onEdit = () => {}, onDelete =
 
                     return (
                         <div key={d.id} className="debt-card">
-                            <div className="debt-actions">
-                                <button className="action-btn" onClick={() => onEdit(d)}>Edit</button>
-                                <button className="action-btn delete" onClick={() => onDelete(d.id)}>Delete</button>
-                            </div>
-
                             <div className="debt-header">
                                 <div className="debt-avatar">
                                     {isOwe ? "🏢" : "👤"}
@@ -107,6 +102,16 @@ function DebtsLoan({ debts = [], onAdd = () => {}, onEdit = () => {}, onDelete =
                                     className="debt-progress-fill" 
                                     style={{ width: `${Math.min(percentPaid, 100)}%` }}
                                 ></div>
+                            </div>
+
+                            <div className="debt-footer">
+                                <div className="debt-footer-left">
+                                    {d.extraInfo && <span>{d.extraInfo}</span>}
+                                </div>
+                                <div className="debt-actions-group">
+                                    <button className="action-btn" onClick={() => onEdit(d)}>Edit</button>
+                                    <button className="action-btn delete" onClick={() => onDelete(d.id)}>Delete</button>
+                                </div>
                             </div>
                         </div>
                     );

@@ -9,6 +9,7 @@ import Transaction from './pages/Transaction';
 import Sources from './pages/sources';
 import DebtsLoan from './pages/DebtsLoan';
 import Coupons from './pages/Coupons';
+import Budgets from './pages/Budgets';
 
 function App(){
     return (
@@ -20,6 +21,7 @@ function App(){
                     <Route path="/sources" element={<Sources />} /> 
                     <Route path="/debts" element={<DebtsLoan />} />
                     <Route path="/coupons" element={<Coupons />} />
+                    <Route path="/budgets" element={<Budgets />} />
                 </Route>
         </Routes>
     );

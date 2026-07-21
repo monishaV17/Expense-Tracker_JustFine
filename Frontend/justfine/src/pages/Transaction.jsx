@@ -1,16 +1,10 @@
 import {useState} from "react";
+import { useOutletContext } from "react-router-dom";
 import '../static/Transaction.css';
 import FilterBox from '../components/FilterBox';
 
 function Transaction(){
-
-    const [transactions, setTransactions] = useState([
-    { id: 1, amount: 180, txn_type: "expense", category_id: "Food & Dining", source_id: "HDFC", description: "Lunch", date: "2026-07-05" },
-    { id: 2, amount: 500, txn_type: "expense", category_id: "Transport", source_id: "Petty Cash", description: "Uber ride", date: "2026-07-04" },
-    { id: 3, amount: 50000, txn_type: "income", category_id: "Salary", source_id: "HDFC", description: "Monthly salary", date: "2026-07-01" },
-    { id: 4, amount: 2200, txn_type: "expense", category_id: "Bills & Utilities", source_id: "SBI", description: "Electricity bill", date: "2026-06-28" },
-    { id: 5, amount: 1200, txn_type: "expense", category_id: "Shopping", source_id: "SBI", description: "Groceries", date: "2026-06-25" }])
-
+    const { transactions = [] } = useOutletContext() || {};
     const [active,setActive]=useState("All");
 
     const filters=["All", "Income", "Expense", "Transfer", "Debts"];

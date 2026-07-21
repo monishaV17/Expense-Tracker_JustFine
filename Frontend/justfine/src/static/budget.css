@@ -1,0 +1,95 @@
+.budget-page{
+    padding: 20px;
+}
+
+.budget-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.budget-top h2{
+    color: var(--text);
+    margin-bottom: 40px;
+}
+
+.budget-add-btn{
+    padding: 7px 14px;
+    background: var(--blue);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+
+.budget-page ul{
+    list-style: none;
+    padding: 0;
+}
+
+.budget-page li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text);
+    margin-bottom: 8px;
+    padding: 10px 14px;
+}
+
+.bd-date{
+    color: var(--text-muted);
+    font-size: 12px;
+    min-width: 90px;
+}
+
+.bd-desc{
+    padding: 0 10px;
+    flex: 1;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bd-category{
+    color: var(--blue);
+    font-size: 12px;
+    padding: 0 70px;
+}
+
+.bd-source{
+    color: var(--blue);
+    font-size: 12px;
+    flex: 1;
+}
+
+.bd-amount{
+    font-weight: 600;
+    min-width: 90px;
+    text-align: right;
+    margin-right: 20px;
+}
+
+.bd-actions-group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.bd-action-btn {
+  border: none;
+  background: transparent;
+  color: var(--blue);
+  cursor: pointer;
+  font-size: 12px;
+  border-radius: 8px;
+  padding: 4px 8px;
+}
+
+.bd-action-btn.delete {
+  color: #ef4444;
+}
+
+

@@ -3,7 +3,7 @@ import '../static/TopBar.css';
 import ToggleTheme from "./ToggleTheme";
 import TransactionModal from "../pages/TransactionModal";
 
-function TopBar({headerLabel}) {
+function TopBar({headerLabel, onAddTransaction}) {
   const [search, setSearch]=useState('');
   const [isModalOpen, setIsModalOpen]=useState(false);
 
@@ -28,7 +28,7 @@ const handleNotify=()=>{
             <TransactionModal
                 isOpen={isModalOpen}
                 onClose={() => setIsModalOpen(false)}
-                 onAdd={(tx) => console.log("new transaction:", tx)}/>
+                onAdd={onAddTransaction} />
         </header>
     )
 }

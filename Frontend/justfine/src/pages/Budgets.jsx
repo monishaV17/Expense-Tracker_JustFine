@@ -7,7 +7,7 @@ const budgetsData = [
     id: 1,
     source_id: "HDFC BANK",
     category_id: "Food & Dining",
-    amount: 3200,
+    amount: 4000,
     description: "Monthly groceries budget",
     budget_date: "2026-07-31"
   },

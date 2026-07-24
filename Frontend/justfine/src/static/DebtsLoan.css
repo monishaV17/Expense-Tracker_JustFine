@@ -8,11 +8,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
 }
 
 .debts-subtitle{
     color: var(--text);
+    margin-bottom: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .debts-list{
@@ -175,6 +176,7 @@
     border-radius: 8px;
     font-size: 13px;
     cursor: pointer;
+    margin-bottom: 40px;
 }
 
 .debts-add-btn:hover{

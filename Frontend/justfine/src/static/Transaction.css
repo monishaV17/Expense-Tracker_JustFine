@@ -4,7 +4,9 @@
 
 .transaction-page h2{
     color: var(--text);
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 24px;
 }
 
 .transaction-page ul{

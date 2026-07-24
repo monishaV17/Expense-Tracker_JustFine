@@ -1,0 +1,69 @@
+.page-container {
+  padding: 24px 28px;
+}
+
+.page-header h2 {
+  margin: 0 0 24px 0;
+  font-size: 24px;
+  color: var(--text);
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 12px;
+  align-items: stretch;
+}
+
+.cat-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 100px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+}
+
+.cat-emoji {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 16px;
+}
+
+.cat-emoji .emoji {
+  font-size: 24px;
+}
+
+.cat-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cat-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.cat-sub {
+  margin-top: 4px;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.cat-card.cat-system .cat-name {
+  color: var(--text);
+}
+
+.cat-card.cat-system .cat-sub {
+  color: var(--text);
+}
